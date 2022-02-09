@@ -1,0 +1,52 @@
+/*carousel slides*/
+#col-slide h5{
+    font-size: 5vw;
+}
+
+#col-slide p {
+    font-size: 3vw;
+}
+
+.carousel-img {
+    width: 100%;
+    min-height: 300px;
+    object-fit: cover;
+}
+
+/*carousel brands*/
+#carousel-slide .col-lg-2 {
+    margin: 1.6%;
+    padding: 0;
+}
+
+a.carousel-control-prev, a.carousel-control-next {
+    width: 5%;
+}
+
+.card-body {
+    color: black;
+}
+
+.card:hover {
+    text-decoration: none;
+}
+
+/*wish-list*/
+.wish-icon {
+    position: relative;
+}
+
+.wish-icon .btn {
+    position: absolute;
+    bottom: 5%;
+    right: 5%;
+    padding: 0;
+}
+
+.wish-icon .btn img {
+    width: 100%;
+}
+
+.wish-icon .btn:hover {
+    transform: scale(1.2);
+}

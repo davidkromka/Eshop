@@ -1,0 +1,93 @@
+/*brands style*/
+.wrapper .single-product .product-img {
+    margin-bottom: 20px;
+    overflow: hidden;
+}
+
+.wrapper .single-product .product-info h3 {
+    font-size: 100%;
+    overflow: hidden;
+}
+
+.wrapper .single-product .product-info h4 {
+    display: inline-block;
+    font-size: 100%;
+}
+
+.wrapper .single-product .product-info .product-old-price {
+    position: relative;
+    padding: 0 7px;
+    margin-right: 2px;
+    opacity: 0.6;
+    text-decoration: line-through;
+}
+
+.product {
+    margin-bottom: 40px;
+}
+
+.single-product, .single-product:hover {
+    color: black;
+    text-decoration: none;
+}
+
+.discount {
+    position: absolute;
+    top: 15px;
+    left: 20px;
+}
+
+/*sidebar*/
+.sidebar {
+    position: sticky;
+    top: 10px;
+    padding-left: 10%;
+    color: black;
+    border-right: 2px solid grey;
+}
+
+.sidebar-title, .sidebar-title:hover {
+    color: black;
+}
+
+.sidebar-items {
+    list-style-type: none;
+    padding-left: 0;
+    margin-top: 30px;
+}
+
+.item, .item:hover {
+    color: black;
+}
+
+.sidebar-items li{
+    margin-top: 10px;
+}
+
+.pagination {
+    justify-content: center;
+}
+
+/*wish-list*/
+.wish-icon {
+    position: relative;
+}
+
+.wish-icon .btn {
+    position: absolute;
+    bottom: 8%;
+    right: 5%;
+    padding: 0;
+}
+
+.wish-icon .btn img {
+    width: 100%;
+}
+
+.wish-icon .btn:hover {
+    transform: scale(1.2);
+}
+
+.pagination {
+    background-color: white;
+}

@@ -1,0 +1,92 @@
+/*main content*/
+.price {
+    font-size: xx-large;
+    font-weight: bold;
+}
+
+.old-price {
+    color: grey;
+    text-decoration: line-through;
+    text-decoration-color: black;
+}
+
+.new-price {
+    color: black;
+    font-size: xxx-large;
+    margin-bottom: 0;
+}
+
+.discount {
+    font-size: x-large;
+    margin-top: 0;
+    color: red;
+    margin-bottom: 10%;
+}
+
+.bookmark {
+    background-color: white;
+    outline: none;
+    border: none;
+    margin: 0;
+}
+
+.description {
+    text-align: justify;
+}
+
+/*carousel products*/
+#carousel-slide .col-lg-2 {
+    margin: 1.6%;
+    padding: 0;
+}
+
+.card-body {
+    color: black;
+}
+
+.card:hover {
+    text-decoration: none;
+}
+
+
+a.carousel-control-prev, a.carousel-control-next {
+    width: 5%;
+}
+
+/*wish-list*/
+.wish-icon {
+    position: relative;
+}
+
+.wish-icon .btn:hover {
+    transform: scale(1.2);
+}
+
+.wish-icon .btn {
+    position: absolute;
+    bottom: 5%;
+    right: 5%;
+    padding: 0;
+}
+
+.wish-icon .btn img {
+    width: 100%;
+}
+
+.color_option {
+    -webkit-user-select: none;
+    user-select: none;
+}
+
+.size_option {
+    -webkit-user-select: none;
+    user-select: none;
+}
+
+#colorButton {
+    pointer-events: none;
+}
+
+#sizeButton {
+    pointer-events: none;
+}

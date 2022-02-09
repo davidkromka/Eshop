@@ -1,0 +1,39 @@
+/*cart content*/
+.card img {
+    width: 10rem;
+    height: 10rem;
+}
+
+.card .btn {
+    display: block;
+}
+
+.card-basic {
+    width: 20vw;
+}
+
+.card .flex-row .p-3 .m-5 {
+    width: 50rem;
+}
+
+.card .p-2 {
+    width: 20rem;
+}
+
+.country {
+    -webkit-user-select: none;
+    user-select: none;
+}
+
+.country2 {
+    -webkit-user-select: none;
+    user-select: none;
+}
+
+.count {
+    display: block;
+}
+
+.bs-stepper-header {
+    overflow: hidden;
+}
