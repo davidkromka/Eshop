@@ -1,0 +1,171 @@
+body {
+    font-family: "Corbel Light", serif;
+}
+
+/*header + nav*/
+header {
+    background-color: #07E493;
+}
+
+nav {
+    background-color: #00B06F;
+}
+
+.navbar-nav a{
+    color: white;
+}
+
+.navbar-header .navbar-brand {
+    font-size: 30px;
+}
+
+header .navbar-brand {
+    font-size: 2rem;
+}
+
+.navbar-collapse {
+    max-width: min-content;
+}
+
+.navbar-nav a {
+    margin-right: 2vw;
+    text-decoration: none;
+}
+
+a.category-title {
+    font-weight: bold;
+}
+/*dropdown*/
+.dropdown a:hover, .sex-buttons a:hover, .navbar-nav a:hover {
+    text-decoration: underline;
+    color: white;
+}
+
+.dropdown .dropdown-menu a {
+    color: black;
+    display: block;
+    margin-left: 10%;
+    overflow: hidden;
+}
+
+.dropdown:hover .dropdown-menu {
+    display: block;
+    margin-top: 0;
+}
+
+nav .dropdown .dropdown-menu .category-item a {
+    color: black;
+}
+
+/*dropdown multiple columns*/
+div.dropdown-multicolumn {
+    width: 40vw;
+}
+
+div.dropdown-multicolumn>div.dropdown-col{
+    float: left;
+    margin-bottom: 30px;
+}
+
+/*footer*/
+.footer-block {
+    font-size: 3vh;
+}
+
+footer a, footer a:hover {
+    color: white;
+}
+
+/*products style*/
+.wrapper .single-product .product-img {
+    margin-bottom: 20px;
+    overflow: hidden;
+}
+
+.wrapper .single-product .product-info h3 {
+    font-size: 100%;
+    overflow: hidden;
+}
+
+.wrapper .single-product .product-info h4 {
+    display: inline-block;
+    font-size: 100%;
+}
+
+.wrapper .single-product .product-info .product-old-price {
+    position: relative;
+    padding: 0 7px;
+    margin-right: 2px;
+    opacity: 0.6;
+    text-decoration: line-through;
+}
+
+.product {
+    margin-bottom: 40px;
+}
+
+.single-product, .single-product:hover {
+    color: black;
+    text-decoration: none;
+}
+
+.discount {
+    position: absolute;
+    top: 15px;
+    left: 20px;
+}
+
+/*sidebar*/
+.sidebar {
+    position: sticky;
+    top: 10px;
+    padding-left: 10%;
+    color: black;
+    border-right: 2px solid grey;
+}
+
+.sidebar-title, .sidebar-title:hover {
+    color: black;
+}
+
+.sidebar-items {
+    list-style-type: none;
+    padding-left: 0;
+    margin-top: 30px;
+}
+
+.item, .item:hover {
+    color: black;
+}
+
+.sidebar-items li{
+    margin-top: 10px;
+}
+
+.pagination {
+    justify-content: center;
+}
+
+/*wish-list*/
+.wish-icon {
+    position: relative;
+}
+
+.wish-icon .btn {
+    position: absolute;
+    bottom: 8%;
+    right: 5%;
+    padding: 0;
+}
+
+.wish-icon .btn img {
+    width: 100%;
+}
+
+.wish-icon .btn:hover {
+    transform: scale(1.2);
+}
+
+.pager {
+    background-color: white;
+}

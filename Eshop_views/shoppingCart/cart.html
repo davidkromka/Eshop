@@ -1,0 +1,549 @@
+<!DOCTYPE html>
+<html lang="sk">
+<head>
+    <meta charset="UTF-8">
+    <title>Cart</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="cart_style.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+    <script src="cart.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bs-stepper/dist/js/bs-stepper.min.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bs-stepper/dist/css/bs-stepper.min.css">
+</head>
+
+<body>
+    <!--choose sex-->
+    <header class="navbar navbar-expand-sm navbar-dark">
+        <div class="collapse navbar-collapse mr-auto" id="navbar-content">
+            <ul class="navbar-nav">
+                <li class="nav-item">
+                    <a href="#">ŽENY</a>
+                </li>
+                <li class="nav-item">
+                    <a href="#">MUŽI</a>
+                </li>
+                <li class="nav-item">
+                    <a href="#">DETI</a>
+                </li>
+            </ul>
+        </div>
+        <!--title-->
+        <a class="navbar-brand mx-auto" href="#">LOGO</a>
+        <!--options bar search, login, bookmark, cart-->
+        <ul class="navbar-nav ml-auto">
+            <li><a data-toggle="collapse" href="#searchbar" role="button" aria-expanded="false" aria-controls="collapseExample">
+                <img src="../sources/search.svg"
+                     alt="Vyhľadávanie produktov a ketogórií." width="35" height="35">
+            </a></li>
+            <li><div class="collapse collapse-horizontal" id="searchbar">
+                <div class="input-group rounded">
+                    <input type="search" class="form-control rounded mr-3" placeholder="Search" aria-label="Search"
+                           aria-describedby="search-addon" />
+                </div>
+            </div></li>
+            <li><a href="" class="btn p-0" data-toggle="modal" data-target="#modal_login_register">
+                <img src="../sources/login.svg"
+                     alt="Prihlásenie alebo registrácia" width="35" height="35">
+            </a></li>
+            <li><a href="#">
+                <img src="../sources/bookmark.svg"
+                     alt="Záložky" width="35" height="35">
+            </a></li>
+            <li><a href="../shoppingCart/cart.html">
+                <img src="../sources/shopping_cart.svg"
+                     alt="Nákupný košík" width="35" height="35">
+            </a></li>
+        </ul>
+    </header>
+
+    <nav class="navbar navbar-expand-md navbar-dark">
+        <!--make menu button if screen smaller than lg-->
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target=".collapse" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="navbar-content2">
+            <ul class="navbar-nav mr-auto">
+                <li class="nav-item">
+                    <a href="#">AKCIA</a>
+                </li>
+                <li class="nav-item">
+                    <a href="#">NOVINKY</a>
+                </li>
+                <li class="nav-item dropdown">
+                    <a class="ndropdown-toggle" href="#" id="brands" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        ZNAČKY
+                    </a>
+                    <div class="brand dropdown-menu pre-scrollable" aria-labelledby="brands">
+                        <a href="#">Adidas</a>
+                        <a href="#">Puma</a>
+                        <a href="#">Nike</a>
+                        <a href="#">Gucci</a>
+                        <a href="#">The North Face</a>
+                        <a href="#">Ocun</a>
+                        <a href="#">Patagonia</a>
+                        <a href="#">Calvin Klein</a>
+                        <a href="#">LEVI'S</a>
+                        <a href="#">Champion</a>
+                        <a href="#">Fila</a>
+                        <a href="#">Columbia</a>
+                        <a href="#">Under Armour</a>
+                    </div>
+                </li>
+                <li class="nav-item dropdown">
+                    <a href="#" id="clothes" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        OBLEČENIE
+                    </a>
+                    <div class="dropdown-menu dropdown-multicolumn p-0" aria-labelledby="clothes">
+                        <div class="dropdown-col">
+                            <a href="#" class="dropdown-item category-title">Nohavice</a>
+                            <a href="#" class="dropdown-item category-item">Rifle</a>
+                            <a href="#" class="dropdown-item category-item">Voľný čas</a>
+                            <a href="#" class="dropdown-item category-item">Turistické</a>
+                            <a href="#" class="dropdown-item category-item">Bežecké</a>
+                        </div>
+                        <div class="dropdown-col">
+                            <a href="#" class="dropdown-item category-title">Bundy</a>
+                            <a href="#" class="dropdown-item category-item">Zimné</a>
+                            <a href="#" class="dropdown-item category-item">Jesenné</a>
+                            <a href="#" class="dropdown-item category-item">Športové</a>
+                        </div>
+                        <div class="dropdown-col">
+                            <a href="#" class="dropdown-item category-title">Nohavice</a>
+                            <a href="#" class="dropdown-item category-item">Rifle</a>
+                            <a href="#" class="dropdown-item category-item">Voľný čas</a>
+                            <a href="#" class="dropdown-item category-item">Turistické</a>
+                            <a href="#" class="dropdown-item category-item">Bežecké</a>
+                        </div>
+                        <div class="dropdown-col">
+                            <a href="#" class="dropdown-item category-title">Nohavice</a>
+                            <a href="#" class="dropdown-item category-item">Rifle</a>
+                            <a href="#" class="dropdown-item category-item">Voľný čas</a>
+                            <a href="#" class="dropdown-item category-item">Turistické</a>
+                            <a href="#" class="dropdown-item category-item">Bežecké</a>
+                        </div>
+                        <div class="dropdown-col">
+                            <a href="#" class="dropdown-item category-title">Nohavice</a>
+                            <a href="#" class="dropdown-item category-item">Rifle</a>
+                            <a href="#" class="dropdown-item category-item">Voľný čas</a>
+                            <a href="#" class="dropdown-item category-item">Turistické</a>
+                            <a href="#" class="dropdown-item category-item">Bežecké</a>
+                        </div>
+                    </div>
+                </li>
+                <li class="nav-item dropdown">
+                    <a href="#" id="shoes" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        OBUV
+                    </a>
+                    <div class="dropdown-menu dropdown-multicolumn p-0" aria-labelledby="shoes">
+                        <div class="dropdown-col">
+                            <a href="#" class="dropdown-item category-title">Letná obuv</a>
+                            <a href="#" class="dropdown-item category-item">Šľapky</a>
+                            <a href="#" class="dropdown-item category-item">Sandále</a>
+                            <a href="#" class="dropdown-item category-item">Balerínky</a>
+                        </div>
+                        <div class="dropdown-col">
+                            <a href="#" class="dropdown-item category-title">Šport</a>
+                            <a href="#" class="dropdown-item category-item">Futbal</a>
+                            <a href="#" class="dropdown-item category-item">Beh</a>
+                            <a href="#" class="dropdown-item category-item">Basketbal</a>
+                            <a href="#" class="dropdown-item category-item">Turistické</a>
+                            <a href="#" class="dropdown-item category-item">Lezecké</a>
+                        </div>
+                        <div class="dropdown-col">
+                            <a href="#" class="dropdown-item category-title">Šport</a>
+                            <a href="#" class="dropdown-item category-item">Futbal</a>
+                            <a href="#" class="dropdown-item category-item">Beh</a>
+                            <a href="#" class="dropdown-item category-item">Basketbal</a>
+                            <a href="#" class="dropdown-item category-item">Turistické</a>
+                            <a href="#" class="dropdown-item category-item">Lezecké</a>
+                        </div>
+                        <div class="dropdown-col">
+                            <a href="#" class="dropdown-item category-title">Letná obuv</a>
+                            <a href="#" class="dropdown-item category-item">Šľapky</a>
+                            <a href="#" class="dropdown-item category-item">Sandále</a>
+                            <a href="#" class="dropdown-item category-item">Balerínky</a>
+                        </div>
+                    </div>
+                </li>
+                <li class="nav-item dropdown">
+                    <a href="#" id="accessories" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        DOPLNKY
+                    </a>
+                    <div class="dropdown-menu dropdown-multicolumn p-0" aria-labelledby="accessories">
+                        <div class="dropdown-col">
+                            <a href="#" class="dropdown-item category-title">Nové</a>
+                        </div>
+                        <div class="dropdown-col">
+                            <a href="#" class="dropdown-item category-title">Tašky & batohy</a>
+                            <a href="#" class="dropdown-item category-item">Športové</a>
+                            <a href="#" class="dropdown-item category-item">Kabelky</a>
+                        </div>
+                        <div class="dropdown-col">
+                            <a href="#" class="dropdown-item category-title">Peňaženky</a>
+                        </div>
+                        <div class="dropdown-col">
+                            <a href="#" class="dropdown-item category-title">Bižutéria</a>
+                            <a href="#" class="dropdown-item category-item">Náušnice</a>
+                            <a href="#" class="dropdown-item category-item">Prstene</a>
+                        </div>
+                    </div>
+                </li>
+            </ul>
+        </div>
+    </nav>
+    <!--stepper-->
+    <main id="CartStepper" class="bs-stepper">
+        <div class="bs-stepper-header" role="tablist">
+            <div class="d-none d-sm-block step" data-target="#content1">
+                <button type="button" class="step-trigger" role="tab" id="CartSteppertrigger1" aria-controls="content1">
+                    <span class="bs-stepper-circle">1</span>
+                    <span class="bs-stepper-label">Nákupný košík</span>
+                </button>
+            </div>
+            <div class="d-none d-md-block bs-stepper-line"></div>
+            <div class="d-none d-sm-block step" data-target="#content2">
+                <button type="button" class="step-trigger" role="tab" id="CartSteppertrigger2" aria-controls="content2">
+                    <span class="bs-stepper-circle">2</span>
+                    <span class="bs-stepper-label">Doprava a platba</span>
+                </button>
+            </div>
+            <div class="d-none d-md-block bs-stepper-line"></div>
+            <div class="d-none d-sm-block step" data-target="#content3">
+                <button type="button" class="step-trigger" role="tab" id="CartSteppertrigger3" aria-controls="content3">
+                    <span class="bs-stepper-circle">3</span>
+                    <span class="bs-stepper-label">Informácie</span>
+                </button>
+            </div>
+            <div class="d-none d-md-block bs-stepper-line"></div>
+            <div class="d-none d-sm-block step" data-target="#content4">
+                <button type="button" class="step-trigger" role="tab" id="CartSteppertrigger4" aria-controls="content4">
+                    <span class="bs-stepper-circle">4</span>
+                    <span class="bs-stepper-label">Zhrnutie</span>
+                </button>
+            </div>
+        </div>
+        <div class="bs-stepper-content">
+            <form onSubmit="return false">
+                <!--Shopping cart-->
+                <div id="content1" role="tabpanel" class="bs-stepper-pane container-fluid" aria-labelledby="CartSteppertrigger1">
+                    <div class="row">
+                        <!--product in cart information-->
+                        <section class="col-lg-9 col-md-12">
+                            <div class="card flex-row p-3 m-5">
+                                <div class="row">
+                                    <img class="img-product ml-3" src="../sources/klobuk.jpg" alt="Klobúk" />
+                                    <div class="card-basic p-0 mx-5">
+                                        <h5 class="card-title">Čierny klobúk</h5>
+                                        <p class="card-text">Veľkosť: univerzálna</p>
+                                        <p class="card-text">Farba: čierna</p>
+                                        <p class="card-text">5 €</p>
+                                    </div>
+                                    <div class="card-count p-0 mx-5">
+                                        <label for="count1" class="card-text m-0">Počet:</label>
+                                        <input class="count" id="count1" type="number" value="1" min="1" max="1000" step="1" />
+                                        <button class="btn btn-outline-secondary mt-5" type="button">Odobrať</button>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="card flex-row p-3 m-5">
+                                <div class="row">
+                                    <img class="img-product ml-3" src="../sources/klobuk1.jpg" alt="Klobúk" />
+                                    <div class="card-basic p-0 mx-5">
+                                        <h5 class="card-title">Autumn&style klobúk</h5>
+                                        <p class="card-text">Veľkosť: M</p>
+                                        <p class="card-text">Farba: čierna</p>
+                                        <p class="card-text">15 €</p>
+                                    </div>
+                                    <div class="card-count p-0 mx-5">
+                                        <label for="count1" class="card-text m-0">Počet:</label>
+                                        <input class="count" id="count2" type="number" value="1" min="1" max="1000" step="1" />
+                                        <button class="btn btn-outline-secondary mt-5" type="button">Odobrať</button>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="card flex-row p-3 m-5">
+                                <div class="row">
+                                    <img class="img-product ml-3" src="../sources/klobuk.jpg" alt="Klobúk" />
+                                    <div class="card-basic p-0 mx-5">
+                                        <h5 class="card-title">Čierny klobúk</h5>
+                                        <p class="card-text">Veľkosť: univerzálna</p>
+                                        <p class="card-text">Farba: čierna</p>
+                                        <p class="card-text">5 €</p>
+                                    </div>
+                                    <div class="card-count p-0 mx-5">
+                                        <label for="count1" class="card-text m-0">Počet:</label>
+                                        <input class="count" id="count3" type="number" value="1" min="1" max="1000" step="1" />
+                                        <button class="btn btn-outline-secondary mt-5" type="button">Odobrať</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </section>
+                        <!--contact, sale code, summary-->
+                        <aside class="col-lg-3 col-md-12 mt-5">
+                            <div class="card p-2">
+                                <div class="card-body">
+                                    <h5 class="card-title">Kontakt</h5>
+                                    <h6>E-mail:</h6>
+                                    <p>objednavky@wtechshop.sk</p>
+                                    <h6>Telefón</h6>
+                                    <p>+421 917 819 325</p>
+                                </div>
+                            </div>
+
+                            <div class="input-group">
+                                <input type="text" class="form-control" placeholder="Zľavový kód">
+                                <button class="btn btn-outline-secondary" type="button">Potvrdiť</button>
+                            </div>
+                            <div class="card p-2">
+                                <div class="card-body">
+                                    <h5 class="card-title">Celková suma</h5>
+                                    <p>Spolu: 384,65 €</p>
+                                    <p>Zľavy: -26,63 €</p>
+                                    <p class="font-weight-bold">Celková cena: 322,32 €</p>
+                                    <p>Celková cena bez DPH: 258,60 €</p>
+                                    <button class="btn btn-primary btnNext" type="button">Ďalej</button>
+                                </div>
+                            </div>
+                        </aside>
+                    </div>
+                </div>
+
+                <!--delivery and payment-->
+                <div id="content2" role="tabpanel" class="bs-stepper-pane container-fluid" aria-labelledby="CartSteppertrigger2">
+                    <div class="row">
+                        <section class="col-md-8">
+                            <div class="card mb-3">
+                                <h5>Zvoľte spôsob dopravy:</h5>
+                                <div class="form-check">
+                                    <input class="form-check-input deliveryRadio" type="radio" name="ragioDelivery" id="delivery_courier_radio" checked>
+                                    <label class="form-check-label" for="delivery_courier_radio">Kuriérom na adresu:</label>
+                                    <label class="form-check-label" id="delivery_courier_price" for="delivery_courier_radio">3,99 €</label>
+                                </div>
+                                <div class="form-check">
+                                    <input class="form-check-input deliveryRadio" type="radio" name="ragioDelivery" id="delivery_postoffice_radio">
+                                    <label class="form-check-label" for="delivery_postoffice_radio">Balík na poštu:</label>
+                                    <label class="form-check-label" id="delivery_postoffice_price" for="delivery_postoffice_radio">2,60 €</label>
+                                </div>
+                                <div class="form-check">
+                                    <input class="form-check-input deliveryRadio" type="radio" name="ragioDelivery" id="delivery_inperson_radio">
+                                    <label class="form-check-label" for="delivery_inperson_radio">Osobne na predajni:</label>
+                                    <label class="form-check-label" id="delivery_inperson_price" for="delivery_inperson_radio">0,00 €</label>
+                                </div>
+                            </div>
+
+                            <div class="card">
+                                <h5>Zvoľte spôsob platby:</h5>
+                                <div class="form-check">
+                                    <input class="form-check-input paymentRadio" type="radio" name="radioPayment" id="payment_transfer_radio" checked>
+                                    <label class="form-check-label" for="payment_transfer_radio">Prevodom na účet:</label>
+                                    <label class="form-check-label" id="payment_transfer_price" for="payment_transfer_radio">0,00 €</label>
+                                </div>
+                                <div class="form-check">
+                                    <input class="form-check-input paymentRadio" type="radio" name="radioPayment" id="payment_card_radio">
+                                    <label class="form-check-label" for="payment_card_radio">Kartou online:</label>
+                                    <label class="form-check-label" id="payment_card_price" for="payment_card_radio">0,00 €</label>
+                                </div>
+                                <div class="form-check">
+                                    <input class="form-check-input paymentRadio" type="radio" name="radioPayment" id="payment_inperson_radio">
+                                    <label class="form-check-label" for="payment_inperson_radio">Na dobierku:</label>
+                                    <label class="form-check-label" id="payment_inperson_price" for="payment_inperson_radio">0,50 €</label>
+                                </div>
+                            </div>
+                        </section>
+                        <aside class="col-md-4">
+                            <div class="card p-2">
+                                <div class="card-body">
+                                    <h5 class="card-title">Kontakt</h5>
+                                    <h6>E-mail:</h6>
+                                    <p>objednavky@wtechshop.sk</p>
+                                    <h6>Telefón</h6>
+                                    <p>+421 917 819 325</p>
+                                </div>
+                            </div>
+
+                            <div class="card p-2">
+                                <div class="card-body">
+                                    <h5 class="card-title">Celková suma</h5>
+                                    <p>Celkom za tovar: 322,32 €</p>
+                                    <p id="deliveryFee"></p><!--Doprava: +3,99 €</p>-->
+                                    <p id="paymentFee"></p><!--Platba:  +0,00 €</p>-->
+                                    <p class="font-weight-bold">Celková cena: 326,31 €</p>
+                                    <p>Celková cena bez DPH: 271,93 €</p>
+                                    <div class="row">
+                                        <button class="btn btn-primary btnPrev mx-3" type="button">Späť</button>
+                                        <button class="btn btn-primary btnNext ml-3" type="button">Ďalej</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </aside>
+                    </div>
+                </div>
+
+                <!--personal and delivery information-->
+                <div id="content3" role="tabpanel" class="bs-stepper-pane container-fluid" aria-labelledby="CartSteppertrigger4">
+                    <div class="row">
+                        <section class="col-md-8">
+                            <h5>Osobné údaje:</h5>
+                            <div class="md-form mb-5">
+                                <label data-error="wrong" data-success="right" for="personalInfoFirstName">Meno:</label>
+                                <input type="text" id="personalInfoFirstName" class="form-control validate">
+                            </div>
+                            <div class="md-form mb-5">
+                                <label data-error="wrong" data-success="right" for="personalInfoLastName">Priezvisko:</label>
+                                <input type="text" id="personalInfoLastName" class="form-control validate">
+                            </div>
+                            <div class="md-form mb-5">
+                                <label data-error="wrong" data-success="right" for="personalInfoPhone">Telefón:</label>
+                                <input type="tel" id="personalInfoPhone" class="form-control validate">
+                            </div>
+                            <div class="md-form mb-5">
+                                <label data-error="wrong" data-success="right" for="personalInfoEmail">E-mail:</label>
+                                <input type="email" id="personalInfoEmail" class="form-control validate">
+                            </div>
+
+                            <h5>Doručovania adresa:</h5>
+                            <div class="dropdown">
+                                <button class="btn btn-secondary dropdown-toggle" type="button" id="personalInfoCountry" data-toggle="dropdown" aria-expanded="false">
+                                    Krajina
+                                </button>
+                                <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                                    <p class="dropdown-item country">Slovensko</p><!--style="user-select:none"-->
+                                    <p class="dropdown-item country">Maďarsko</p>
+                                    <p class="dropdown-item country">Zimbabwe</p>
+                                </div>
+                            </div>
+                            <div class="md-form mb-5">
+                                <label data-error="wrong" data-success="right" for="personalInfoCity">Mesto:</label>
+                                <input type="text" id="personalInfoCity" class="form-control validate">
+                            </div>
+                            <div class="md-form mb-5">
+                                <label data-error="wrong" data-success="right" for="personalInfoStreet">Ulica + popisné číslo:</label>
+                                <input type="text" id="personalInfoStreet" class="form-control validate">
+                            </div>
+                            <div class="md-form mb-5">
+                                <label data-error="wrong" data-success="right" for="personalInfoPSC">PSČ:</label>
+                                <input type="text" id="personalInfoPSC" class="form-control validate">
+                            </div>
+
+                            <h5>Fakturačná adresa (len ak je iná ako doručovacia):</h5>
+                            <div class="dropdown">
+                                <button class="btn btn-secondary dropdown-toggle" type="button" id="personalInfoCountry2" data-toggle="dropdown" aria-expanded="false">
+                                    Krajina
+                                </button>
+                                <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                                    <p class="dropdown-item country2">Slovensko</p>
+                                    <p class="dropdown-item country2">Maďarsko</p>
+                                    <p class="dropdown-item country2">Zimbabwe</p>
+                                </div>
+                            </div>
+                            <div class="md-form mb-5">
+                                <label data-error="wrong" data-success="right" for="personalInfoCity2">Mesto:</label>
+                                <input type="text" id="personalInfoCity2" class="form-control validate">
+                            </div>
+                            <div class="md-form mb-5">
+                                <label data-error="wrong" data-success="right" for="personalInfoStreet2">Ulica + popisné číslo:</label>
+                                <input type="text" id="personalInfoStreet2" class="form-control validate">
+                            </div>
+                            <div class="md-form mb-5">
+                                <label data-error="wrong" data-success="right" for="personalInfoPSC2">PSČ:</label>
+                                <input type="text" id="personalInfoPSC2" class="form-control validate">
+                            </div>
+                        </section>
+                        <aside class="col-md-4">
+                            <div class="card p-2">
+                                <div class="card-body">
+                                    <h5 class="card-title">Kontakt</h5>
+                                    <h6>E-mail:</h6>
+                                    <p>objednavky@wtechshop.sk</p>
+                                    <h6>Telefón</h6>
+                                    <p>+421 917 819 325</p>
+                                </div>
+                            </div>
+
+                            <div class="card p-2">
+                                <div class="card-body">
+                                    <h5 class="card-title">Celková suma</h5>
+                                    <p class="font-weight-bold">Celková cena: 322,32 €</p>
+                                    <p>Celková cena bez DPH: 258,60 €</p>
+                                    <div class="row">
+                                        <button class="btn btn-primary btnPrev mx-3" type="button">Späť</button>
+                                        <button class="btn btn-primary btnNext ml-3" type="button">Ďalej</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </aside>
+                    </div>
+                </div>
+
+                <!--summary-->
+                <div id="content4" role="tabpanel" class="bs-stepper-pane container-fluid" aria-labelledby="CartSteppertrigger4">
+                    <div class="row">
+                        <section class="col-md-8">
+
+                        </section>
+                        <aside class="col-md-4">
+                            <div class="card p-2">
+                                <div class="card-body">
+                                    <h5 class="card-title">Kontakt</h5>
+                                    <h6>E-mail:</h6>
+                                    <p>objednavky@wtechshop.sk</p>
+                                    <h6>Telefón</h6>
+                                    <p>+421 917 819 325</p>
+                                </div>
+                            </div>
+
+                            <div class="card p-2">
+                                <div class="card-body">
+                                    <h5 class="card-title">Celková suma</h5>
+                                    <p class="font-weight-bold">Celková cena: 322,32 €</p>
+                                    <p>Celková cena bez DPH: 258,60 €</p>
+
+                                    <div class="row">
+                                        <input class="mt-2" type="checkbox" id="bussinessTermsCheckbox">
+                                        <label>Súhlasím s obchodnými podmienkami</label>
+                                    </div>
+
+                                    <div class="row">
+                                        <button class="btn btn-primary btnPrev mx-3" type="button">Späť</button>
+                                        <button class="btn btn-primary btnNext ml-3" type="button">Potvdiť</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </aside>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </main>
+
+    <footer class="bg-dark">
+        <div class="container p-4">
+            <div class="row">
+                <div class="col-lg-3 col-md-6 mb-4 mb-md-0">
+                    <ul class="list-unstyled mb-0">
+                        <li><a class="hd" href="#">Informácie</a></li>
+                        <li><a href="#">Ako nakupovať?</a></li>
+                        <li><a href="#">Tabuľka veľkostí</a></li>
+                        <li><a href="#">Obchodné podmienky</a></li>
+                        <li><a href="#">Často kladené otázky</a></li>
+                    </ul>
+                </div>
+
+                <div class="col-lg-3 col-md-6 mb-4 mb-md-0">
+                    <ul class="list-unstyled mb-0">
+                        <li><a class="hd" href="#">Doprava a platba</a></li>
+                        <li><a href="#">Vrátenie a reklamácia</a></li>
+                        <li><a href="#">Spôsob platby</a></li>
+                        <li><a href="#">Doprava a doručenie</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>

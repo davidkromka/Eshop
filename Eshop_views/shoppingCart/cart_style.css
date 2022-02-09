@@ -1,0 +1,117 @@
+body {
+    font-family: "Corbel Light", serif;
+}
+
+/*header + nav*/
+header {
+    background-color: #07E493;
+}
+
+nav {
+    background-color: #00B06F;
+}
+
+.navbar-nav a{
+    color: white;
+}
+
+.navbar-header .navbar-brand {
+    font-size: 30px;
+}
+
+header .navbar-brand {
+    font-size: 2rem;
+}
+
+.navbar-collapse {
+    max-width: min-content;
+}
+
+.navbar-nav a {
+    margin-right: 2vw;
+    text-decoration: none;
+}
+
+a.category-title {
+    font-weight: bold;
+}
+/*dropdown*/
+.dropdown a:hover, .sex-buttons a:hover, .navbar-nav a:hover {
+    text-decoration: underline;
+    color: white;
+}
+
+.dropdown .dropdown-menu a {
+    color: black;
+    display: block;
+    margin-left: 10%;
+    overflow: hidden;
+}
+
+.dropdown:hover .dropdown-menu {
+    display: block;
+    margin-top: 0;
+}
+
+nav .dropdown .dropdown-menu .category-item a {
+    color: black;
+}
+
+/*dropdown multiple columns*/
+div.dropdown-multicolumn {
+    width: 40vw;
+}
+
+div.dropdown-multicolumn>div.dropdown-col{
+    float: left;
+    margin-bottom: 30px;
+}
+
+/*footer*/
+.footer-block {
+    font-size: 3vh;
+}
+
+footer a, footer a:hover {
+    color: white;
+}
+
+/*cart content*/
+.card img {
+    width: 10rem;
+    height: 10rem;
+}
+
+.card .btn {
+    display: block;
+}
+
+.card-basic {
+    width: 20vw;
+}
+
+.card .flex-row .p-3 .m-5 {
+    width: 50rem;
+}
+
+.card .p-2 {
+    width: 20rem;
+}
+
+.country {
+    -webkit-user-select: none;
+    user-select: none;
+}
+
+.country2 {
+    -webkit-user-select: none;
+    user-select: none;
+}
+
+.count {
+    display: block;
+}
+
+.bs-stepper-header {
+    overflow: hidden;
+}
