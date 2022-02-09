@@ -1,0 +1,133 @@
+body {
+    font-family: "Corbel Light", serif;
+}
+
+/*header + nav*/
+header {
+    background-color: #07E493;
+}
+
+nav {
+    background-color: #00B06F;
+}
+
+.navbar-nav a{
+    color: white;
+}
+
+.navbar-header .navbar-brand {
+    font-size: 30px;
+}
+
+header .navbar-brand {
+    font-size: 2rem;
+}
+
+.navbar-collapse {
+    max-width: min-content;
+}
+
+.navbar-nav a {
+    margin-right: 2vw;
+    text-decoration: none;
+}
+
+a.category-title {
+    font-weight: bold;
+}
+/*dropdown*/
+.dropdown a:hover, .sex-buttons a:hover, .navbar-nav a:hover {
+    text-decoration: underline;
+    color: white;
+}
+
+.dropdown .dropdown-menu a {
+    color: black;
+    display: block;
+    margin-left: 10%;
+    overflow: hidden;
+}
+
+.dropdown:hover .dropdown-menu {
+    display: block;
+    margin-top: 0;
+}
+
+nav .dropdown .dropdown-menu .category-item a {
+    color: black;
+}
+
+/*dropdown multiple columns*/
+div.dropdown-multicolumn {
+    width: 40vw;
+}
+
+div.dropdown-multicolumn>div.dropdown-col{
+    float: left;
+    margin-bottom: 30px;
+}
+
+/*footer*/
+.footer-block {
+    font-size: 3vh;
+}
+
+footer a, footer a:hover {
+    color: white;
+}
+
+/*carousel slides*/
+#col-slide h5{
+    font-size: 5vw;
+}
+
+#col-slide p {
+    font-size: 3vw;
+}
+
+.carousel-img {
+    width: 100%;
+    min-height: 300px;
+    object-fit: cover;
+}
+
+/*carousel products*/
+#carousel-slide .col-lg-2 {
+    margin: 1.6%;
+    padding: 0;
+}
+
+a.carousel-control-prev, a.carousel-control-next {
+    width: 5%;
+}
+
+.card-body {
+    color: black;
+}
+
+.card:hover {
+    text-decoration: none;
+}
+
+/*wish-list*/
+.wish-icon {
+    position: relative;
+}
+
+.wish-icon .btn {
+    position: absolute;
+    bottom: 5%;
+    right: 5%;
+    padding: 0;
+}
+
+.wish-icon .btn img {
+    width: 100%;
+}
+
+.wish-icon .btn:hover {
+    transform: scale(1.2);
+}
+
+
+
